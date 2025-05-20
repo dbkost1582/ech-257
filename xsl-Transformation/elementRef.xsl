@@ -14,6 +14,9 @@
 					<xsl:element name="depth">
 						<xsl:value-of select="depth"/>
 					</xsl:element>
+					<xsl:element name="identitaet">
+						<xsl:value-of select="identitaet"/>
+					</xsl:element>
 				</xsl:element>
 			</xsl:for-each>
 		</xsl:element>
