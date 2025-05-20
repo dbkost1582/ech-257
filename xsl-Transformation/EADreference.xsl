@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:EAD="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" xmlns="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- named template EADreference -->
 	<xsl:template name="EADreference">
 		<xsl:param name="signature"/>
@@ -7,7 +7,7 @@
 			<xsl:text>_</xsl:text>
 			<xsl:value-of select="$signature"/>
 		</xsl:variable>
-		<xsl:element name="EAD:unitid">
+		<xsl:element name="unitid">
 			<xsl:attribute name="label">refCode</xsl:attribute>
 			<xsl:choose>
 				<xsl:when test="$reffile//reference">
