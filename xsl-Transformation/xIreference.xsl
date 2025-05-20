@@ -26,7 +26,6 @@
 					-->
 					<!-- apply template using select on reference file to find number for signature  -->
 					<xsl:apply-templates select="$reffile//reference/*[name()=$sig]" mode="refNo"/>
-					<!-- <xsl:apply-templates select="$reffile//reference/identity[referenceCode=$signature]" mode="refNo"/> -->
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="$signature"/>
