@@ -6,16 +6,15 @@
 	<xsl:template match="/">
 		<xsl:element name="reference">
 			<xsl:for-each select="//reference/identity">
-				<xsl:variable name="ref" select="referenceCode"/>
-				<xsl:element name="_{$ref}">
+				<xsl:element name="identity">
+					<xsl:element name="referenceCode">
+						<xsl:value-of select="referenceCode"/>
+					</xsl:element>
 					<xsl:element name="referenceNo">
 						<xsl:number/>
 					</xsl:element>
 					<xsl:element name="depth">
 						<xsl:value-of select="depth"/>
-					</xsl:element>
-					<xsl:element name="identitaet">
-						<xsl:value-of select="identitaet"/>
 					</xsl:element>
 				</xsl:element>
 			</xsl:for-each>

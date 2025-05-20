@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <eadheader>
+      <eadid>what_so_ever</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper/>
+         </titlestmt>
+      </filedesc>
+   </eadheader>
+   <archdesc level="otherlevel" otherlevel="paketSIP">
+      <did>
+         <unittitle label="main">paketSIP</unittitle>
+         <langmaterial/>
+      </did>
+      <dsc>
+         <c id="sig.1" level="otherlevel" otherlevel="Bestand">
+            <did>
+               <unitid label="refCode">sig.1</unitid>
+               <unittitle label="main">RIS ein Dossier</unittitle>
+               <unitdate label="creationPeriod">1967-02-01/1967-04-02</unitdate>
+               <origination>#19_aktenbildnerName</origination>
+            </did>
+            <note>
+               <p>#11_ablieferungBemerkung</p>
+               <p>#23_provenienzBemerkung</p>
+               <p>#27_ordnungssystemBemerkung</p>
+            </note>
+            <bioghist>
+               <p>#22_geschichteAktenbildner</p>
+            </bioghist>
+            <custodhist>
+               <p>#21_systemBeschreibung</p>
+            </custodhist>
+            <acqinfo>
+               <p>#09_ablieferndeStelle</p>
+            </acqinfo>
+            <appraisal>
+               <p>#16_referenzBewertungsentscheid</p>
+            </appraisal>
+            <c id="sig.1.1" level="otherlevel" otherlevel="Serie">
+               <did>
+                  <unitid label="refCode">sig.1.1</unitid>
+                  <unittitle label="main">#39_ordnungssystemTitel</unittitle>
+               </did>
+               <accessrestrict type="restrict">
+                  <list>
+                     <defitem>
+                        <label>hasPrivacyProtection</label>
+                        <item>true</item>
+                     </defitem>
+                     <defitem>
+                        <label>openToThePublic</label>
+                        <item>undefined</item>
+                     </defitem>
+                     <defitem>
+                        <label>classification</label>
+                        <item>unclassified</item>
+                     </defitem>
+                     <defitem>
+                        <label>otherAccessConditions</label>
+                        <item>#34_oeffentlichkeitsstatusBegruendung</item>
+                     </defitem>
+                     <defitem>
+                        <label>accessConditionsNotes</label>
+                        <item>#35_sonstigeBestimmungen</item>
+                     </defitem>
+                  </list>
+               </accessrestrict>
+               <c id="sig.1.1.1" level="otherlevel" otherlevel="Dossier">
+                  <did>
+                     <unitid label="refCode">sig.1.1.1</unitid>
+                     <unittitle label="main">#43_dossierTitel</unittitle>
+                     <unitdate label="creationPeriod">1967-02-07/1967-03-08</unitdate>
+                  </did>
+                  <note>
+                     <p>#52_dossierBemerkung</p>
+                  </note>
+                  <custodhist>
+                     <p>#42_zusatzmerkmal</p>
+                  </custodhist>
+                  <scopecontent>
+                     <p>hybrid</p>
+                  </scopecontent>
+                  <accessrestrict type="restrict">
+                     <list>
+                        <defitem>
+                           <label>hasPrivacyProtection</label>
+                           <item>true</item>
+                        </defitem>
+                        <defitem>
+                           <label>openToThePublic</label>
+                           <item>undefined</item>
+                        </defitem>
+                        <defitem>
+                           <label>classification</label>
+                           <item>unclassified</item>
+                        </defitem>
+                        <defitem>
+                           <label>otherAccessConditions</label>
+                           <item>#50_oeffentlichkeitsstatusBegruendung</item>
+                        </defitem>
+                        <defitem>
+                           <label>accessConditionsNotes</label>
+                           <item>#51_sonstigeBestimmungen</item>
+                        </defitem>
+                     </list>
+                  </accessrestrict>
+                  <phystech>
+                     <p>not_defined</p>
+                  </phystech>
+                  <c id="sig.1.1.1_1" level="otherlevel" otherlevel="Dokument">
+                     <did>
+                        <unitid label="refCode">sig.1.1.1_1</unitid>
+                        <unittitle label="main">#59_dokumentTitel</unittitle>
+                        <unitdate label="creationPeriod">1967-02-12/1967-02-13</unitdate>
+                     </did>
+                     <note>
+                        <p>#66_dokumentBemerkung</p>
+                     </note>
+                     <scopecontent>
+                        <p>#61_dokumenttyp</p>
+                     </scopecontent>
+                     <accessrestrict type="restrict">
+                        <list>
+                           <defitem>
+                              <label>hasPrivacyProtection</label>
+                              <item>true</item>
+                           </defitem>
+                           <defitem>
+                              <label>openToThePublic</label>
+                              <item>undefined</item>
+                           </defitem>
+                           <defitem>
+                              <label>classification</label>
+                              <item>unclassified</item>
+                           </defitem>
+                           <defitem>
+                              <label>otherAccessConditions</label>
+                              <item>#64_oeffentlichkeitsstatusBegruendung</item>
+                           </defitem>
+                           <defitem>
+                              <label>accessConditionsNotes</label>
+                              <item>#65_sonstigeBestimmungen</item>
+                           </defitem>
+                        </list>
+                     </accessrestrict>
+                     <phystech>
+                        <p>digital</p>
+                     </phystech>
+                  </c>
+               </c>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

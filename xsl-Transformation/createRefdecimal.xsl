@@ -21,7 +21,7 @@
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$archsig" />
 				<xsl:text>.ablieferung</xsl:text>
-				<xsl:number level="any" />
+				<xsl:number level="single" />
 			</xsl:element>
 			<xsl:element
 				name="depth">
@@ -35,7 +35,7 @@
 			<xsl:with-param name="sig">
 				<xsl:value-of select="$archsig" />
 				<xsl:text>.ablieferung</xsl:text>
-				<xsl:number level="any" />
+				<xsl:number level="single" />
 			</xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -47,7 +47,7 @@
 			<xsl:with-param name="sig">
 				<xsl:value-of select="$archsig" />
 				<xsl:text>.ordnungssystem</xsl:text>
-				<xsl:number level="any" />
+				<xsl:number level="single" />
 			</xsl:with-param>
 		</xsl:apply-templates>
 		<!-- In case of FILES, a mappe is allowed too.  -->
@@ -57,7 +57,7 @@
 			<xsl:with-param name="sig">
 				<xsl:value-of select="$archsig" />
 				<xsl:text>.ordnungssystem</xsl:text>
-				<xsl:number level="any" />
+				<xsl:number level="single" />
 			</xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -69,7 +69,7 @@
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig" />
 			<xsl:text>.ordnungssystemposition</xsl:text>
-			<xsl:number level="any" />
+			<xsl:number level="single" />
 		</xsl:variable>
 		<xsl:element
 			name="identity">
@@ -116,7 +116,7 @@
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig" />
 			<xsl:text>.mappe</xsl:text>
-			<xsl:number level="any" />
+			<xsl:number level="single" />
 		</xsl:variable>
 		<xsl:element
 			name="identity">
@@ -173,7 +173,7 @@
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig" />
 			<xsl:text>.dossier</xsl:text>
-			<xsl:number level="any" />
+			<xsl:number level="single" />
 		</xsl:variable>
 		<xsl:element
 			name="identity">
@@ -223,7 +223,7 @@
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig" />
 			<xsl:text>_dokument</xsl:text>
-			<xsl:number level="any" />
+			<xsl:number level="single" />
 		</xsl:variable>
 		<xsl:element
 			name="identity">
@@ -256,7 +256,7 @@
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig" />
 			<xsl:text>_dateiRef</xsl:text>
-			<xsl:number level="any" />
+			<xsl:number level="single" />
 		</xsl:variable>
 		<xsl:element
 			name="identity">
