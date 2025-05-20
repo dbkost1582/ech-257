@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:EAD="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" xmlns="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- named template EADaccess -->
 	<xsl:template name="EADaccess">
 		<xsl:param name="position"/>
 		<xsl:if test="arelda:datenschutz or arelda:oeffentlichkeitsstatus or arelda:klassifizierungskategorie or arelda:oeffentlichkeitsstatusBegruendung or arelda:sonstigeBestimmungen">
-			<xsl:element name="EAD:accessrestrict">
+			<xsl:element name="accessrestrict">
 				<xsl:attribute name="type">restrict</xsl:attribute>
-				<xsl:element name="EAD:list">
+				<xsl:element name="list">
 					<!-- Datenschutz -->
 					<xsl:if test="arelda:datenschutz">
-						<xsl:element name="EAD:defitem">
-							<xsl:element name="EAD:label">hasPrivacyProtection</xsl:element>
-							<xsl:element name="EAD:item">
+						<xsl:element name="defitem">
+							<xsl:element name="label">hasPrivacyProtection</xsl:element>
+							<xsl:element name="item">
 								<xsl:value-of select="arelda:datenschutz"/>
 							</xsl:element>
 						</xsl:element>
 					</xsl:if>
 					<!-- Öffentlichkeitsstatus -->
 					<xsl:if test="arelda:oeffentlichkeitsstatus">
-						<xsl:element name="EAD:defitem">
-							<xsl:element name="EAD:label">openToThePublic</xsl:element>
-							<xsl:element name="EAD:item">
+						<xsl:element name="defitem">
+							<xsl:element name="label">openToThePublic</xsl:element>
+							<xsl:element name="item">
 								<xsl:choose>
 									<xsl:when test="arelda:oeffentlichkeitsstatus/text()='einsehbar' or arelda:oeffentlichkeitsstatus/text()='accessible'">
 										<xsl:text>public</xsl:text>
@@ -37,9 +37,9 @@
 					</xsl:if>
 					<!-- Klassifizierung -->
 					<xsl:if test="arelda:klassifizierungskategorie">
-						<xsl:element name="EAD:defitem">
-							<xsl:element name="EAD:label">classification</xsl:element>
-							<xsl:element name="EAD:item">
+						<xsl:element name="defitem">
+							<xsl:element name="label">classification</xsl:element>
+							<xsl:element name="item">
 								<xsl:choose>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='geheim'">
 										<xsl:text>secret</xsl:text>
@@ -56,18 +56,18 @@
 					</xsl:if>
 					<!-- Begründung -->
 					<xsl:if test="arelda:oeffentlichkeitsstatusBegruendung">
-						<xsl:element name="EAD:defitem">
-							<xsl:element name="EAD:label">otherAccessConditions</xsl:element>
-							<xsl:element name="EAD:item">
+						<xsl:element name="defitem">
+							<xsl:element name="label">otherAccessConditions</xsl:element>
+							<xsl:element name="item">
 								<xsl:value-of select="arelda:oeffentlichkeitsstatusBegruendung/text()"/>
 							</xsl:element>
 						</xsl:element>
 					</xsl:if>
 					<!-- sonstige Bestimmungen -->
 					<xsl:if test="arelda:sonstigeBestimmungen">
-						<xsl:element name="EAD:defitem">
-							<xsl:element name="EAD:label">accessConditionsNotes</xsl:element>
-							<xsl:element name="EAD:item">
+						<xsl:element name="defitem">
+							<xsl:element name="label">accessConditionsNotes</xsl:element>
+							<xsl:element name="item">
 								<xsl:value-of select="arelda:sonstigeBestimmungen/text()"/>
 							</xsl:element>
 						</xsl:element>
