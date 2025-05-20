@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+        <xs:include schemaLocation="base.xsd"/>
+
+        <xs:simpleType name="titelMappe">
+                <xs:annotation>
+                  <xs:documentation xml:lang="de">Bezeichnung des mappes.
+                    GEVER: Kurzbeschreibung des Geschäftsfalls (bei Serienmappenbildung) oder des Sachbetreffs (bei Sachmappenbildung) zu welchem Dokumente im mappe abgelegt werden. 
+                    FILES: Kurzbeschreibung des Inhalts der Datensammlung und der Dokumentation (falls vorhanden)</xs:documentation>
+                  <xs:documentation xml:lang="en">"Designation of the mappe.
+                    GEVER: Brief description of the business event (when creating serial mappes) or matter (when creating mappes for specific matters) in respect of which documents are archived in the mappe. 
+                    FILES: Brief description of the content of the data collection and the documentation (if present)"</xs:documentation>
+                  <xs:documentation xml:lang="fr">"Désignation du mappe ou du groupe de documents.
+                    GEVER: brève description de l'affaire (dans le cas de la formation des mappes en série) ou des objets (dans le cas de la formation de mappes) auxquels appartiennent les documents classés dans le mappe.
+                    FILES: brève description du contenu de la collection de données et de la documentation (si elle existe)."</xs:documentation>
+                  <xs:documentation xml:lang="it"/>
+                </xs:annotation>
+                <xs:restriction base="text4"/>
+              </xs:simpleType>
+            
+              <xs:simpleType name="inhaltMappe">
+                <xs:annotation>
+                  <xs:documentation xml:lang="de">Inhaltlicher Schwerpunkt der Datensammlung sofern dies nicht aus dem Feld "Titel" hervorgeht.</xs:documentation>
+                  <xs:documentation xml:lang="en">Main content focus of the data collection, if not clear from the "title" field.</xs:documentation>
+                  <xs:documentation xml:lang="fr">Sujet principal du contenu de la collection de données, si celui-ci n'apparaît pas dans le champ "Titre".</xs:documentation>
+                  <xs:documentation xml:lang="it"/>
+                </xs:annotation>
+                <xs:restriction base="text4"/>
+              </xs:simpleType>
+
+              <xs:simpleType name="idMappe">
+                <xs:annotation>
+                  <xs:documentation xml:lang="de">Paketweit eindeutige ID. Sie wird im AIS im Modul Verzeichnungseinheiten auf mappestufe verzeichnet.</xs:documentation>
+                  <xs:documentation xml:lang="en">Unambiguous ID for the whole package. It is described in the units of description module of the AIS at mappe level.</xs:documentation>
+                  <xs:documentation xml:lang="fr">ID univoque pour tout le paquet. Elle est enregistrée dans AIS dans le module Unité de description au niveau des mappes.</xs:documentation>
+                  <xs:documentation xml:lang="it"/>
+                </xs:annotation>
+                <xs:restriction base="xs:ID">
+                  <xs:minLength value="1"/>
+                </xs:restriction>
+              </xs:simpleType>
+
+              <xs:simpleType name="reihungMappe">
+                <xs:annotation>
+                    <xs:documentation>Position in der Reihenfolge der Mappen</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="text4"/>
+              </xs:simpleType>
+
+              <xs:simpleType name="erscheinungsformMappe">
+                <xs:annotation>
+                  <xs:documentation xml:lang="de">Angaben darüber, ob das mappe digitale, nicht-digitale (Papier, audiovisuell) oder sowohl digitale als auch nicht-digitale Dokumente enthält.</xs:documentation>
+                  <xs:documentation xml:lang="en">Indication of whether the mappe contains digital, non-digital (paper, audiovisual) or both digital and non-digital documents.</xs:documentation>
+                  <xs:documentation xml:lang="fr">Indiquer si le mappe contient des documents numériques, non numériques (papier, audiovisuel) </xs:documentation>
+                  <xs:documentation xml:lang="it"/>
+                </xs:annotation>
+                <xs:restriction base="xs:token">
+                  <xs:enumeration value="keine Angabe"/>
+                  <xs:enumeration value="digital"/>
+                  <xs:enumeration value="nicht digital"/>
+                  <xs:enumeration value="gemischt"/>
+                </xs:restriction>
+              </xs:simpleType>
+
+              <xs:simpleType name="bemerkungMappe">
+                <xs:annotation>
+                  <xs:documentation xml:lang="de">Zusätzliche Informationen, welche das mappe oder die Datensammlung betreffen. Hier können nähere Angaben zur Sprache und zu speziellen technischen Anforderungen eingetragen werden, welche den Zugang der Daten einschränken könnten.</xs:documentation>
+                  <xs:documentation xml:lang="en">Additional information relating to the mappe or the data collection. Further information on the language and special technical requirements that may restrict access to the data may be entered here.</xs:documentation>
+                  <xs:documentation xml:lang="fr">Informations complémentaires qui concernent le mappe ou la collection de données. Ici peuvent être reportées les précisions sur la langue et sur les exigences techniques qui peuvent limiter l'accès aux données.</xs:documentation>
+                  <xs:documentation xml:lang="it"/>
+                </xs:annotation>
+                <xs:restriction base="text4"/>
+              </xs:simpleType>
+            
+
+</xs:schema>
