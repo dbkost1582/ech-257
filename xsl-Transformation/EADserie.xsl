@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:EAD="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" xmlns="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:ordnungssystemposition">
 		<xsl:param name="sig"/>
@@ -8,17 +8,18 @@
 			<xsl:text>.</xsl:text>
 			<xsl:number/>
 		</xsl:variable>
-		<xsl:element name="EAD:c">
+		<xsl:element name="c">
 			<!-- 3.1.4 Verzeichnungsstufe -->
+			<xsl:attribute name="id"><xsl:value-of select="$signature"/></xsl:attribute>
 			<xsl:attribute name="level">otherlevel</xsl:attribute>
 			<xsl:attribute name="otherlevel">Serie</xsl:attribute>
-			<xsl:element name="EAD:did">
+			<xsl:element name="did">
 				<!-- 3.1.1 Signatur -->
 				<xsl:call-template name="EADreference">
 					<xsl:with-param name="signature" select="$signature"/>
 				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
-				<xsl:element name="EAD:unittitle">
+				<xsl:element name="unittitle">
 					<xsl:attribute name="label">main</xsl:attribute>
 					<xsl:value-of select="arelda:titel"/>
 				</xsl:element>
